@@ -1,0 +1,36 @@
+# ---- 09_realworld: 含公司项目源码（RunFunctionJob），不进公开仓库 ----
+# 文件仍留在本地磁盘，照常编译、照常跑 gtest，只是 git 不跟踪。
+09_realworld/
+
+# ---- 构建产物（不进仓库，WSL 里 cmake 重新生成即可）----
+build/
+build-cov/
+cmake-build-*/
+
+# ---- 编译 / 覆盖率中间文件 ----
+*.o
+*.obj
+*.a
+*.so
+*.d
+*.gcno
+*.gcda
+*.gcov
+*.info
+
+# ---- 可执行文件（本工程产物都在 build/bin/ 下，这里兜底）----
+*.exe
+*.out
+
+# ---- 编辑器 / IDE ----
+.vscode/
+.idea/
+*.swp
+*~
+compile_commands.json
+.cache/
+
+# ---- 系统 ----
+.DS_Store
+Thumbs.db
+desktop.ini
